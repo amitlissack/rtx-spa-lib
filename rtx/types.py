@@ -19,3 +19,13 @@ class RtxConfiguration(int, Enum):
     baud_rate_460800 = 0xC  # 1100
     enable_flow_control = 0x1  # 0001
     label_filtering = 0xF  # 1111
+
+
+class RtxParity(int, Enum):
+    odd = 0
+    even = 1
+
+
+class RtxArincSpeed(int, Enum):
+    high = 0
+    low = 1
