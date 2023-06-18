@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import Literal
 
 
 class RtxCommandIdentifier(int, Enum):
@@ -29,3 +30,6 @@ class RtxParity(int, Enum):
 class RtxArincSpeed(int, Enum):
     high = 0
     low = 1
+
+
+ChannelType = Literal[0, 1]

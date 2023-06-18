@@ -1,10 +1,7 @@
 from typing import Literal
 
 from rtx.command.base import RtxCommandBase
-from rtx.types import RtxParity, RtxArincSpeed, RtxCommandIdentifier
-
-
-ChannelType = Literal[0, 1]
+from rtx.types import RtxParity, RtxArincSpeed, RtxCommandIdentifier, ChannelType
 
 
 class RtxTxControlCommand(RtxCommandBase):
