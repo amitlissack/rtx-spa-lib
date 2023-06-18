@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rtx-spa-lib"
+authors = [
+    {name = "Amit Lissack", email = "amit.lissack@gmail.com"},
+]
+description = "Tools for using RTX Arinc 429 Serial Port Adaptor"
+readme = "README.rst"
+requires-python = ">=3.10"
+keywords = ["arinc", "429", "rtx"]
+license = {text = "BSD-3-Clause"}
+dependencies = [
+    "pyserial",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["mypy", "black", "flake8", "pytest"]
