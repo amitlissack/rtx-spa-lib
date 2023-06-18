@@ -27,7 +27,7 @@ jobs:
         python -m pip install ".[dev]"
     - name: Lint with black
       run: |
-        black .
+        black rtx tests --check
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -38,5 +38,5 @@ jobs:
       run: |
         mypy rtx tests
     - name: Test with pytest
-      run: |#
+      run: |
         pytest

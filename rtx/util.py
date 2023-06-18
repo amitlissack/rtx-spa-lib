@@ -5,6 +5,7 @@ def convert(command: int, arinc_word: int) -> int:
     :param arinc_word: Arinc 29 word
     :return: RTX-SPA 40 bit integer
     """
+    # Bit 32 is always 1.
     result = 0x0100000000 | ((command & 7) << 33)
     # Bits 31-28
     result |= (arinc_word & 0xF0000000) << 8
