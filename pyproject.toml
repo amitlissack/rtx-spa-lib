@@ -8,8 +8,8 @@ authors = [
     {name = "Amit Lissack", email = "amit.lissack@gmail.com"},
 ]
 description = "Tools for using RTX Arinc 429 Serial Port Adaptor"
-readme = "README.rst"
-requires-python = ">=3.10"
+readme = "README.md"
+requires-python = ">=3.9"
 keywords = ["arinc", "429", "rtx"]
 license = {text = "BSD-3-Clause"}
 dependencies = [
