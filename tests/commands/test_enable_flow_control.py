@@ -1,6 +1,6 @@
 import pytest
 
-from rtx.command.flow_control import RtxEnableFlowControlCommand
+from rtx.command import RtxEnableFlowControlCommand
 
 
 @pytest.fixture

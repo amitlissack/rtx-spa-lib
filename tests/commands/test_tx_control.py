@@ -1,6 +1,6 @@
 import pytest
 
-from rtx.command.tx_control import RtxTxControlCommand
+from rtx.command import RtxTxControlCommand
 from rtx.types import ChannelType, RtxArincSpeed, RtxParity
 
 

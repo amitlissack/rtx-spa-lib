@@ -1,6 +1,6 @@
 import pytest
 
-from rtx.command.baud_rate import RtxBaudRateCommand
+from rtx.command import RtxBaudRateCommand
 from rtx.types import BaudRateCommand, RtxConfiguration
 
 

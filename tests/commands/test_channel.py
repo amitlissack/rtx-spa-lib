@@ -1,6 +1,6 @@
 import pytest
 
-from rtx.command.channel import RtxTxRxCommand
+from rtx.command import RtxTxRxCommand
 from rtx.types import ChannelCommand, RtxCommandIdentifier
 
 

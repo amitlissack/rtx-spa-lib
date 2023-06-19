@@ -9,7 +9,7 @@ authors = [
 ]
 description = "Tools for using RTX Arinc 429 Serial Port Adaptor"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.7"
 keywords = ["arinc", "429", "rtx"]
 license = {text = "BSD-3-Clause"}
 dependencies = [

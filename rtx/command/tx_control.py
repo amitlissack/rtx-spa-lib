@@ -1,6 +1,5 @@
 from rtx.command.base import RtxCommandBase
-from rtx.types import (ChannelType, RtxArincSpeed, RtxCommandIdentifier,
-                       RtxParity)
+from rtx.types import ChannelType, RtxArincSpeed, RtxCommandIdentifier, RtxParity
 
 
 class RtxTxControlCommand(RtxCommandBase):
