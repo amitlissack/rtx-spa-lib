@@ -5,7 +5,7 @@ from typing import Literal
 class RtxCommandIdentifier(int, Enum):
     channel0_tx_rx = 0x1  # 001
     channel1_tx_rx = 0x3  # 011
-    configure = 0x4  # 010
+    configure = 0x2  # 010
     tx_control = 0x0  # 000
     rx_control = 0x6  # 110
 
@@ -36,4 +36,14 @@ ChannelType = Literal[0, 1]
 
 ChannelCommand = Literal[
     RtxCommandIdentifier.channel0_tx_rx, RtxCommandIdentifier.channel1_tx_rx
+]
+
+BaudRateCommand = Literal[
+    RtxConfiguration.baud_rate_9600,
+    RtxConfiguration.baud_rate_19200,
+    RtxConfiguration.baud_rate_38400,
+    RtxConfiguration.baud_rate_57600,
+    RtxConfiguration.baud_rate_115200,
+    RtxConfiguration.baud_rate_230400,
+    RtxConfiguration.baud_rate_460800,
 ]
