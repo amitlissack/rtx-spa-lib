@@ -1,5 +1,5 @@
 from rtx.command.base import RtxCommandBase
-from rtx.types import BaudRateCommand, RtxConfiguration, RtxCommandIdentifier
+from rtx.types import BaudRateCommand, RtxCommandIdentifier, RtxConfiguration
 
 
 class RtxBaudRateCommand(RtxCommandBase):

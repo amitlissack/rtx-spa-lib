@@ -1,5 +1,5 @@
 from rtx.command.base import RtxCommandBase
-from rtx.types import RtxConfiguration, RtxCommandIdentifier
+from rtx.types import RtxCommandIdentifier, RtxConfiguration
 
 
 class RtxEnableFlowControlCommand(RtxCommandBase):
