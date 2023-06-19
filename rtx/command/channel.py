@@ -16,7 +16,7 @@ class RtxTxRxCommand(RtxCommandBase):
         self.__identifier = identifier
         self.__word = 0
 
-    def get_word(self) -> bytes:
+    def get_bytes(self) -> bytes:
         return to_rtx_spa_command(command=self.__identifier, arinc_word=self.__word)
 
     def word(self, arinc29_word: int) -> "RtxTxRxCommand":
