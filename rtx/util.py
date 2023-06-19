@@ -1,3 +1,6 @@
+from typing import Tuple
+
+
 def to_rtx_spa_command(command: int, arinc_word: int) -> bytes:
     """Convert an Arinc 29 32-bit Word to an RTX-SPA ready 40-bit command.
 
@@ -20,7 +23,7 @@ def to_rtx_spa_command(command: int, arinc_word: int) -> bytes:
     return bytes([byte_a, byte_b, byte_c, byte_d, byte_e])
 
 
-def from_rtx_spa_command(rtx_spa_command: bytes) -> tuple[int, int]:
+def from_rtx_spa_command(rtx_spa_command: bytes) -> Tuple[int, int]:
     """Convert RTX spa 40 bit command into a command and Arinc29 32 bit word
 
     :param rtx_spa_command: The rtx spa command
