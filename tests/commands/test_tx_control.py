@@ -55,4 +55,3 @@ def test_speed(
 ) -> None:
     """It should set the speed correctly."""
     assert subject.speed(speed).get_bytes() == expected
-g
