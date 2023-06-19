@@ -11,7 +11,7 @@ def subject() -> RtxTxControlCommand:
 
 @pytest.mark.parametrize(
     argnames=["channel", "expected"],
-    argvalues=[[0, bytes([0x01, 0x00])], [1, bytes([0x09, 0x08])]],
+    argvalues=[[0, bytes([0x01, 0x01])], [1, bytes([0x09, 0x09])]],
 )
 def test_channel(
     subject: RtxTxControlCommand, channel: ChannelType, expected: bytes
@@ -22,7 +22,7 @@ def test_channel(
 
 @pytest.mark.parametrize(
     argnames=["enabled", "expected"],
-    argvalues=[[True, bytes([0x01, 0x00])], [False, bytes([0x21, 0x20])]],
+    argvalues=[[True, bytes([0x01, 0x01])], [False, bytes([0x21, 0x21])]],
 )
 def test_parity(subject: RtxTxControlCommand, enabled: bool, expected: bytes) -> None:
     """It should set the parity enabled bit correctly."""
@@ -32,8 +32,8 @@ def test_parity(subject: RtxTxControlCommand, enabled: bool, expected: bytes) ->
 @pytest.mark.parametrize(
     argnames=["bit", "expected"],
     argvalues=[
-        [RtxParity.odd, bytes([0x01, 0x00])],
-        [RtxParity.even, bytes([0x41, 0x40])],
+        [RtxParity.odd, bytes([0x01, 0x01])],
+        [RtxParity.even, bytes([0x41, 0x41])],
     ],
 )
 def test_parity_bit(
@@ -46,8 +46,8 @@ def test_parity_bit(
 @pytest.mark.parametrize(
     argnames=["speed", "expected"],
     argvalues=[
-        [RtxArincSpeed.low, bytes([0x81, 0x80])],
-        [RtxArincSpeed.high, bytes([0x01, 0x00])],
+        [RtxArincSpeed.low, bytes([0x81, 0x81])],
+        [RtxArincSpeed.high, bytes([0x01, 0x01])],
     ],
 )
 def test_speed(

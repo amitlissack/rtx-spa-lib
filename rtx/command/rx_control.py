@@ -38,8 +38,8 @@ class RtxRxControlCommand(RtxCommandBase):
         parity_stuffing = (not self.__parity_stuffing) << 6
         # bits 4-5 is channel
         channel = self.__channel << 4
-        # bits 0-3 are b1101 for first byte and b1100 for second
-        command = (RtxCommandIdentifier.rx_control & 0x7) << 1
+        # bits 0-3 are b1101
+        command = ((RtxCommandIdentifier.rx_control & 0x7) << 1) | 0x1
         cmd_byte = speed | parity_stuffing | channel | command
 
-        return bytes([cmd_byte | 0x1, cmd_byte])
+        return bytes([cmd_byte, cmd_byte])

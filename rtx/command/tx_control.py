@@ -47,8 +47,8 @@ class RtxTxControlCommand(RtxCommandBase):
         parity_enable = (not self.__parity_enable) << 5
         # bits 3-4 is channel
         channel = self.__channel << 3
-        # bits 0-2 are b001 for first byte and b000 for second
-        command = (RtxCommandIdentifier.tx_control & 0x7) << 1
+        # bits 0-2 are b001
+        command = ((RtxCommandIdentifier.tx_control & 0x7) << 1) | 0x1
         cmd_byte = speed | parity_bit | parity_enable | channel | command
 
-        return bytes([cmd_byte | 1, cmd_byte])
+        return bytes([cmd_byte, cmd_byte])
